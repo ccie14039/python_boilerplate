@@ -5,7 +5,7 @@ from .core import add
 #from core import add
 from optparse import OptionParser
 from . import __version__ as version
-import __version__ as version
+#import __version__ as version
 
 def parse_option():
     usage = '%prog num1 num2'
@@ -16,7 +16,7 @@ def parse_option():
 def main():
     option, args = parse_option()
     if len(sys.argv) == 3:
-        x, y = map(int, sys.argv[1:])
+        x, y = map(float, sys.argv[1:])
         print(add(x, y))
     else:
         print('please specify 2 arguments', file=sys.stderr)
