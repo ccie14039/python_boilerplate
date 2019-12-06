@@ -6,3 +6,7 @@ def add(x, y):
     float(y)
     return x + y
 
+def subs(x, y):
+    float(x)
+    float(y)
+    return x - y

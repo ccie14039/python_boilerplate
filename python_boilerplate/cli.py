@@ -2,10 +2,11 @@
 
 import sys
 from .core import add
-#from core import add
+#from core import add, subs
 from optparse import OptionParser
 from . import __version__ as version
 #import __version__ as version
+from symbol import subscript
 
 def parse_option():
     usage = '%prog num1 num2'
@@ -17,7 +18,8 @@ def main():
     option, args = parse_option()
     if len(sys.argv) == 3:
         x, y = map(float, sys.argv[1:])
-        print(add(x, y))
+        print("addition: ", add(x, y))
+        print("substraction: ", subs(x, y))
     else:
         print('please specify 2 arguments', file=sys.stderr)
         sys.exit(1)
